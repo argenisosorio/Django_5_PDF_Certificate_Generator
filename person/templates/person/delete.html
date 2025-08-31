@@ -1,0 +1,14 @@
+{% extends 'person/base.html' %}
+
+{% block content %}
+<div class="alert alert-danger" role="alert">
+    <h4 class="alert-heading">¿Eliminar persona?</h4>
+    <p>Estás a punto de eliminar permanentemente a <strong>{{ person.name }}</strong>.</p>
+    <hr>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Confirmar eliminación</button>
+        <a href="{% url 'person:home' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+{% endblock %}

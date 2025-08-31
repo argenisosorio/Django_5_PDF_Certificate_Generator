@@ -1,0 +1,9 @@
+*.*.backup
+*.*~
+*.tar.gz
+*.pyc
+*.log
+*.swp
+*.sqlite3
+db.sqlite3
+Django_5_PDF_Certificate_Generator/settings.py
