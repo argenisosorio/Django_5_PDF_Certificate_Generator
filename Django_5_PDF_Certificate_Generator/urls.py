@@ -5,6 +5,6 @@ urlpatterns = [
     # Admin route
     path('admin/', admin.site.urls),
 
-    # Include the URLs from person app.
-    path('', include('person.urls')),
+    # Include the URLs person pdf_generator app.
+    path('', include('pdf_generator.urls')),
 ]

@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Curso - Aprendizaje en Robótica">
+    <meta name="author" content="Ing. Argenis Osorio">
+    <title>Person CRUD</title>
+    <!-- Load Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}" />
+    <!-- Load Bootstrap CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Load Bootstrap JS -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

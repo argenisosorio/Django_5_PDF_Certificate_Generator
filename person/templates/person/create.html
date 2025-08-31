@@ -4,7 +4,59 @@
 <h1>{% if form.instance.pk %}Update{% else %}Create{% endif %} Person</h1>
 <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+    
+    {# Campo name con HTML personalizado #}
+    <div class="form-group mb-2">
+        <label for="id_name">Full Name:</label>
+        <input
+            type="text" 
+            name="name" 
+            id="id_name" 
+            value="{{ form.name.value|default:'' }}" 
+            class="form-control {% if form.name.errors %}is-invalid{% endif %}" 
+        >
+        {% if form.name.errors %}
+        <div class="invalid-feedback">
+            {{ form.name.errors }}
+        </div>
+        {% endif %}
+    </div>
+    
+    {# Campo email #}
+    <div class="form-group mb-2">
+        <label for="id_email">Email Address:</label>
+        <input
+            type="email" 
+            name="email" 
+            id="id_email" 
+            value="{{ form.email.value|default:'' }}" 
+            class="form-control {% if form.email.errors %}is-invalid{% endif %}" 
+        >
+        {% if form.email.errors %}
+        <div class="invalid-feedback">
+            {{ form.email.errors }}
+        </div>
+        {% endif %}
+    </div>
+    
+    {# Campo age #}
+    <div class="form-group mb-2">
+        <label for="id_age">Age:</label>
+        <input
+            type="number" 
+            name="age" 
+            id="id_age" 
+            value="{{ form.age.value|default:'' }}" 
+            class="form-control {% if form.age.errors %}is-invalid{% endif %}" 
+            min="0"
+        >
+        {% if form.age.errors %}
+        <div class="invalid-feedback">
+            {{ form.age.errors }}
+        </div>
+        {% endif %}
+    </div>
+
     <button type="submit" class="btn btn-success">Save</button>
 </form>
 {% endblock %}
