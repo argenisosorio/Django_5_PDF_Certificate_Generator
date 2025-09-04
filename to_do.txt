@@ -7,3 +7,6 @@ To Do List
 
 3- Proveer al usuario de enlace para descargar los certificados generados en
 un .zip.
+
+4- Actualziar README indicando la ruta donde se guardan los certificados y los
+paquetes y versiones requeridos para la generación.

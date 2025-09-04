@@ -7,3 +7,4 @@
 *.sqlite3
 db.sqlite3
 Django_5_PDF_Certificate_Generator/settings.py
+media/
