@@ -1,0 +1,9 @@
+To Do List
+==========
+
+1- Documentar todos los nuevos cambios.
+
+2- Optimizar respuesta al usuario luego de que finaliza el proceso de generación
+
+3- Proveer al usuario de enlace para descargar los certificados generados en
+un .zip.

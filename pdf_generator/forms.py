@@ -23,3 +23,12 @@ class CertificateForm(forms.Form):
             'accept': '.csv'
         })
     )
+
+    svg_file = forms.FileField(
+        label="Archivo SVG",
+        validators=[FileExtensionValidator(allowed_extensions=['svg'])],
+        widget=forms.FileInput(attrs={
+            'class': 'form-control',
+            'accept': '.svg'
+        })
+    )
