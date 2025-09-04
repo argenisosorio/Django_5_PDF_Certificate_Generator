@@ -1,7 +1,7 @@
 {% extends 'pdf_generator/base.html' %}
 
 {% block content %}
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     {% csrf_token %}
 
     <div class="form-group mb-2">
@@ -9,7 +9,7 @@
         <label for="id_name_event">Nombre del Evento:</label>
         <input
             type="text"
-            name="id_name_event"
+            name="name_event"
             id="id_name_event"
             class="form-control"
         >
@@ -20,9 +20,21 @@
         <label for="id_event_acronyms">Siglas del Evento:</label>
         <input
             type="text"
-            name="id_event_acronyms"
+            name="event_acronyms"
             id="id_event_acronyms"
             class="form-control"
+        >
+    </div>
+
+    <div class="form-group mb-2">
+        <label for="id_csv_file">Archivo CSV de Participantes:</label>
+        <input
+            type="file"
+            name="csv_file"
+            id="id_csv_file"
+            class="form-control"
+            accept=".csv"
+            required
         >
     </div>
 
